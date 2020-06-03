@@ -2,12 +2,12 @@
 <!-- form_for部分 -->
 <%= form_for(@book) do |f| %>
   <div class="field">
- 	<lavel for="book-title">Title</lavel></br>
+ 	  <%= f.labl :title %>
     <%= f.text_field :title %>
   </div>
 
   <div class="field" >
-    <lavel for="book-body">Boby</lavel></br>
+    <%= f.labl :body %>
     <%= f.text_area :body %><br>
   </div>
 
