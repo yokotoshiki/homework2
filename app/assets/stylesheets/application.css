@@ -45,20 +45,20 @@ a:visited {
 	color: green;
 }
 
-table{
-	width: 90%;
-}
 
 th{
 	padding-bottom: 5px;
 }
 
-td{
+table td {
+	width: 33%;
+    word-break : break-all;
 	padding-bottom: 7px;
 	padding-left: 5px;
 	padding-right: 5px;
 
 }
+
 
 #error_explanation{
 	width: 450px;
