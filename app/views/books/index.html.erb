@@ -3,6 +3,7 @@
 	<%= flash[:notice] %>
 </div>
 
+<%= flash.now[:error] = 'error' %>
 <table>
   <thead>
     <tr>
@@ -18,9 +19,9 @@
  	  <td><%= book.title %></td>
  	  <td><%= book.body %></td>
  	  <td>
- 	  	<%= link_to "show", book_path(book.id) %>
- 	  	<%= link_to "edit", edit_book_path(book.id) %>
- 	  	<%= link_to "destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+ 	  	<%= link_to "show", book_path(book) %>
+ 	  	<%= link_to "edit", edit_book_path(book) %>
+ 	  	<%= link_to "destroy", book_path(book), method: :delete, "data-confirm" => "Are you sure?" %>
  	  </td>
  	 </tr>
  	<% end %>
