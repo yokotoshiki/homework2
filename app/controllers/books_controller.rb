@@ -3,7 +3,7 @@ class BooksController < ApplicationController
   	  #記事を全件取得
   	  @books = Book.all
   	  @book = Book.new
-  	  @books = Book.all.order(created_at: :desc)
+  	  @books = Book.all.order(created_at: :asc)
   end
 
   def show
@@ -22,7 +22,6 @@ class BooksController < ApplicationController
     else
       @books = Book.all
       render 'index'
-      flash[:error] = 'error'
     end
   end
 
@@ -36,7 +35,6 @@ class BooksController < ApplicationController
   	  flash[:notice] = "Book was successfully updated."
   	  redirect_to book_path(@book)
   	 else
-  	 	flash[:error] = 'error'
   	 	render 'edit'
        end
   end
